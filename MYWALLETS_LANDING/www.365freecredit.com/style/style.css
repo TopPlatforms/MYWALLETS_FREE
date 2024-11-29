@@ -1,0 +1,206 @@
+.glowing {
+    box-shadow: 0 0 10px rgba(57, 123, 230, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glowing:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 1);
+    transform: scale(1.05);
+}
+
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+.raven-button-overlay {
+    background-image: linear-gradient(90deg, #009C1A, #00EF27, #009C1A, #009C1A, #00EF27);
+    background-size: 400% 100%;
+    animation: AnimatedGradientBgLeft 6s infinite;
+
+}
+
+.tng-button-gradient {
+    background-image: linear-gradient(90deg, #007BFF, #00BFFF, #007BFF, #007BFF, #00BFFF);
+    background-size: 400% 100%;
+    animation: AnimatedGradientBgLeft 6s infinite;
+}
+
+.raven-button-overlay:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+    /* Green color for the glowing effect */
+    transform: scale(1.05);
+}
+
+/* Optional animation definition */
+@keyframes AnimatedGradientBgLeft {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Ensure no horizontal scroll */
+}
+
+body[page="home"] .floating-whatsapp {
+    display: block;
+}
+.floating-telegram img {
+    width: 100%;
+}
+.floating-telegram {
+    position: fixed;
+    width: 25px;
+    bottom: 100px;
+    right: 0px;
+    z-index: 1;
+}
+.floating-whatsapp img {
+    width: 100%;
+}
+.floating-whatsapp {
+    position: fixed;
+    width: 25px;
+    bottom: 210px;
+    right: 0px;
+    z-index: 1;
+}
+
+.floating-tips {
+    position: fixed;
+    width: 50px;
+    bottom: 320px;
+    right: 5px;
+    z-index: 1;
+    animation: movemove 20s infinite;
+}
+@keyframes movemove{
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-300px); }
+    100% { transform: translateY(300); }
+}
+.floating-tips img {
+    width: 300%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: margin-left .5s;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav {  
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index:3;
+    top: 0;
+    left: -250px;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+
+}
+
+.open{
+    right: calc(100% - 250px);
+}
+
+.dropdown-btn
+{
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav a ,.dropdown-btn{
+text-decoration: none;
+font-size: 19px;
+color: #4D4D4D;
+display: flex;
+font-weight: 700;
+gap: 10px;
+flex-direction: row;
+align-items: center;
+}
+
+.mybox
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidenav a:hover {
+    color: #EC7c25;
+    background-color: #FFE6c7;
+    border-radius: 8px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    padding-left: 10px;
+    border: none;
+    margin: 5px;
+    position: fixed;
+    z-index: 2;
+} */
+
+.openbtn:hover {
+    background-color: #FFE6c7;
+    border-radius: 8px;
+}
+
+.logo {
+    height: 46px;
+    margin: 5px auto;
+}
+
+
+/* .active {
+    background-color: #FFE6c7;
+    color: #EC7c25;
+    border-radius: 8px;
+} */
